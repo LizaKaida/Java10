@@ -87,7 +87,7 @@ public class Main {
         me.human = me;
 
         fiat.sale(me, brotherInLow, 8000.0);
-        me.sale(me, brotherInLow, 200.0);
+        me.sale(me, brotherInLow, 300.0);
 
     }
 }
