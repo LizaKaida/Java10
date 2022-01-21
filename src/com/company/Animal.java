@@ -34,7 +34,18 @@ public abstract class Animal implements Saleable{
         }
             }
 
-    public abstract void takeForAWalk();
+    public void takeForAWalk(){
+        if (weight <=0){
+            System.out.println("Nie ide na spacer");
+            return;
+        }
+        weight--;
+        if (weight >0){
+            System.out.println("Moja waga to"+ weight);
+        }else {
+            System.out.println("Za duzo spacerowalem");
+        }
+    }
 }
 
 

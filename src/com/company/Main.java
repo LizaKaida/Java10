@@ -10,20 +10,10 @@ public class Main {
 
             }
 
-            @Override
-            public void takeForAWalk() {
-
-            }
         };
         Animal cat = new Animal("Puszek") {
             @Override
             public void sale(Human seller, Human buyer, Double price) {
-
-            }
-
-            @Override
-            public void takeForAWalk() {
-
             }
         };
 
@@ -39,10 +29,6 @@ public class Main {
         System.out.println(fiat);
 
         Human me = new Human() {
-            @Override
-            public void takeForAWalk() {
-
-            }
         };
 
         me.setSalary(1000.0);
@@ -62,11 +48,6 @@ public class Main {
             public void sale(Human seller, Human buyer, Double price) {
 
             }
-
-            @Override
-            public void takeForAWalk() {
-
-            }
         };
 
         fiat.turnOn();
@@ -74,12 +55,7 @@ public class Main {
         phone.turnOn();
         phone.isTurnedOn();
 
-        Human brotherInLow = new Human() {
-            @Override
-            public void takeForAWalk() {
-
-            }
-        };
+        Human brotherInLow = new Human(){};
 
         brotherInLow.cash = 10000.0;
         me.car = fiat;
