@@ -1,7 +1,10 @@
 package com.company;
 
+import com.company.creatures.Animal;
+
 public abstract class Human extends Animal {
     public boolean getSalary;
+    public boolean species;
     String Human_Species = "homo sapiens";
 
     public String firstName;
