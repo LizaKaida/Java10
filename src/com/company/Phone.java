@@ -1,5 +1,8 @@
 package com.company;
 
+import java.net.URL;
+import java.util.List;
+
 public class Phone  extends Device implements Saleable{
 
     Integer ramSize;
@@ -45,6 +48,23 @@ public class Phone  extends Device implements Saleable{
             buyer.mobile = this;
             System.out.println("udalo sie sprzedac telefon za"+ price +"pln");
         }
+    }
+
+
+    public void installAnApp(String appName){
+
+    }
+    public void installAnApp(String appNAme, String version){
+
+    }
+    public void installAnApp(String appName, String version, String server){
+
+    }
+    public void installAnApp(List<String> appNames){
+
+    }
+    public void installAnApp(URL url){
+
     }
 
 
