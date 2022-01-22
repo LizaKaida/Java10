@@ -1,22 +1,18 @@
 package com.company;
 
 import com.company.creatures.Animal;
+import com.company.creatures.Pet;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Animal dog = new Animal("Canis") {
-            @Override
-            public void sale(Human seller, Human buyer, Double price) {
+        Animal dog = new Pet("Canis") {
 
-            }
 
         };
-        Animal cat = new Animal("Puszek") {
-            @Override
-            public void sale(Human seller, Human buyer, Double price) {
-            }
+        Animal cat = new Pet("Puszek") {
+
         };
 
         Phone phone = new Phone ("apple", "iphone13", 2021, "white", 4,3);
