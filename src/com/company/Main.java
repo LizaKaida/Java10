@@ -63,5 +63,13 @@ public class Main {
         fiat.sale(me, brotherInLow, 8000.0);
         me.sale(me, brotherInLow, 300.0);
 
+        Phone iphone = null;
+        iphone.installAnApp("messenger");
+
+
+
+
+
+
     }
 }

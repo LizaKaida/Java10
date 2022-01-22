@@ -1,10 +1,13 @@
 package com.company;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
 public class Phone  extends Device implements Saleable{
 
+    private static final String DEFAULT_APP_VERSION ="latest" ;
+    private static final String DEFAULT_APP_SERVER = "appstore.wsb.com";
     Integer ramSize;
     String ramText;
     Integer totalStorage;
@@ -51,19 +54,37 @@ public class Phone  extends Device implements Saleable{
     }
 
 
-    public void installAnApp(String appName){
+    public void installAnApp(String appName)  {
+        System.out.println("instalowanie aplikacji wg nazwy"+appName);
+        this.installAnApp(appName, DEFAULT_APP_VERSION);
 
     }
-    public void installAnApp(String appNAme, String version){
+    public void installAnApp(String appName, String version)  {
+        System.out.println("instalowanie aplikacji wg nazwy:" +appName +"i wersji"+ version);
+        this.installAnApp(appName, version, DEFAULT_APP_SERVER);
 
     }
-    public void installAnApp(String appName, String version, String server){
+    public void installAnApp(String appName, String version, String server)  {
+        System.out.println("instalowanie aplikacji wg nazwy"+appName +"wersji");
+        try{
+            URL url = new URL("https",server,443,appName +" - "+version );
+        } catch (MalformedURLException e){
+            System.out.println("nie udalo sie zainstalowac"+ appName);
+        }
 
     }
     public void installAnApp(List<String> appNames){
+        System.out.println("instalowanie aplikacji z listy");
+        for(String appName: appNames){
+            this.installAnApp(appName);
+        }
 
     }
     public void installAnApp(URL url){
+        System.out.println("sprawdzanie adresu docelowego");
+        System.out.println("sprawdzaie miejsca na telefonie");
+        System.out.println("obsluga platnosci");
+        System.out.println("instalacja");
 
     }
 
