@@ -8,9 +8,9 @@ public abstract class Animal implements Saleable,Feedable {
     private static final Double DEFAULT_ANIMAL_WEIGHT = 6.0;
     public static final double DEFAULT_DOG_WEIGHT = 10.0;
     public static final double DEFAULT_CAT_WEIGHT = 1.0;
-    final String species;
-    private Double weight;
-    String name;
+    public final String species;
+    protected Double weight;
+    public String name;
     Boolean isAlive;
 
 
@@ -27,6 +27,14 @@ public abstract class Animal implements Saleable,Feedable {
         else { this.weight = DEFAULT_ANIMAL_WEIGHT;
         }
 
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public Double getWeight() {
+        return weight;
     }
 
     public void feed() {
