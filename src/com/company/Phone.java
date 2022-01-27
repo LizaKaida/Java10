@@ -8,6 +8,8 @@ public class Phone  extends Device implements Saleable{
 
     private static final String DEFAULT_APP_VERSION ="latest" ;
     private static final String DEFAULT_APP_SERVER = "appstore.wsb.com";
+    public final static String DEFAULT_SERVER_ADDRESS = "192.168.1.10";
+    public final static String DEFAULT_PROTOCOL = "https";
     Integer ramSize;
     String ramText;
     Integer totalStorage;

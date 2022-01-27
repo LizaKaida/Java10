@@ -56,7 +56,6 @@ public class Main {
         Human brotherInLow = new Human(){};
 
         brotherInLow.cash = 10000.0;
-        me.car = fiat;
         me.pet = cat;
         me.human = me;
 
