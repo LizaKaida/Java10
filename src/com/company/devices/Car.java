@@ -1,9 +1,15 @@
-package com.company;
+package com.company.devices;
 
-public class Car extends Device implements Saleable{
+import com.company.creatures.Human;
+import com.company.Saleable;
+
+public abstract class Car extends Device implements Saleable {
 
     public Double engineVolume;
-    private String plates;
+    public String model;
+    public String yearOfProduction;
+    public String plates;
+    public Double capacitance;
 
 
     public Car(String producer, String model, Integer yearOfProduction, String colour, Double engineVolume) {
@@ -29,18 +35,18 @@ public class Car extends Device implements Saleable{
             System.out.println("nie masz kasy");
         }else if(!seller.hasCar(this)) {
             System.out.println("nie masz samochodu");
-        }else if(!buyer.hasFreeSpace()){
-            System.out.println("nie masz miejsca");
         }
         else{
             seller.cash += price;
             buyer.cash -= price;
-            seller.removeCar(this);
-            buyer.addCar(this);
+            seller.car = null;
+            buyer.car = this;
             System.out.println("udalo sie sprzedac za" + price + "pln");
 
         }
     }
+    public abstract void Refuel();
+
 
 
 }

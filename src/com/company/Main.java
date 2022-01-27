@@ -1,7 +1,10 @@
 package com.company;
 
 import com.company.creatures.Animal;
+import com.company.creatures.Human;
 import com.company.creatures.Pet;
+import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Main {
 
@@ -18,8 +21,18 @@ public class Main {
         Phone phone = new Phone ("apple", "iphone13", 2021, "white", 4,3);
         Phone xiaomi = new Phone ("xiaomi", "mi8",2018, "black", 4, 3);
 
-        Car fiat = new Car ("Fiat", "Bravo", 2016, "red", 3.0);
-        Car masserati = new Car("VW", "Passat", 2004, "black", 3.0);
+        Car fiat = new Car("Fiat", "Bravo", 2016, "red", 3.0) {
+            @Override
+            public void Refuel() {
+
+            }
+        };
+        Car masserati = new Car("VW", "Passat", 2004, "black", 3.0) {
+            @Override
+            public void Refuel() {
+
+            }
+        };
 
 
         System.out.println("model: " + fiat.model );
@@ -56,7 +69,6 @@ public class Main {
         Human brotherInLow = new Human(){};
 
         brotherInLow.cash = 10000.0;
-        me.pet = cat;
         me.human = me;
 
         fiat.sale(me, brotherInLow, 8000.0);

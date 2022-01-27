@@ -1,10 +1,13 @@
-package com.company;
+package com.company.devices;
+
+import com.company.creatures.Human;
+import com.company.Saleable;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-public class Phone  extends Device implements Saleable{
+public class Phone  extends Device implements Saleable {
 
     private static final String DEFAULT_APP_VERSION ="latest" ;
     private static final String DEFAULT_APP_SERVER = "appstore.wsb.com";

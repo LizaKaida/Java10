@@ -1,7 +1,5 @@
 package com.company.creatures;
 
-import com.company.Human;
-
 public class FarmAnimal extends Animal implements Edbile{
     boolean beEaten;
 

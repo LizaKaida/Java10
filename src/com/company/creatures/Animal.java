@@ -9,6 +9,7 @@ public abstract class Animal implements Saleable,Feedable {
     public static final double DEFAULT_DOG_WEIGHT = 10.0;
     public static final double DEFAULT_CAT_WEIGHT = 1.0;
     public final String species;
+    public Animal pet;
     protected Double weight;
     public String name;
     Boolean isAlive;

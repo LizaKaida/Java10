@@ -1,6 +1,8 @@
-package com.company;
+package com.company.devices;
 
-abstract public class Device implements Saleable{
+import com.company.Saleable;
+
+abstract public class Device implements Saleable {
 
     String producer;
     String model;
