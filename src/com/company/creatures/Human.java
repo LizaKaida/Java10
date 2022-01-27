@@ -9,14 +9,13 @@ public abstract class Human extends Animal {
     public boolean species;
     public Human human;
     public Phone mobile;
-    public Car car;
+   public Car[] garage;
     String Human_Species = "homo sapiens";
 
     public String firstName;
     String lastName;
     private Double salary;
     public Double cash;
-    public Car[] garage;
     Animal pet;
 
 
@@ -51,17 +50,62 @@ public abstract class Human extends Animal {
             System.out.println("nie wolno handlowac ludzmi");
         }
     }
-
+    public Car getCar(Integer space){
+        return garage[space];
+    }
+    public void setCar(Car car, Integer space){
+        if(salary>car.value){
+            if(garage[space] != null ){
+                this.garage[space] = car;
+                System.out.println("udalo sie kupic auto");
+            } else {
+                System.out.println("to miejsce zajete w garazu");
+            }
+        }
+    }
+    public void removeCar(Car car){
+        for(int i = 0; i < this.garage.length; i++){
+            if(this.garage[i] == car){
+                this.garage[i] = null;
+                i = this.garage.length;
+                System.out.println("usunieto " + car );
+            }
+        }
+    }
+    public void addCar (Car car){
+        Integer space = 0;
+        for (int i = 0; i < this.garage.length; i++) {
+            if(this.garage[i] == null){
+                this.garage[i] = car;
+                System.out.println("dodano samochod");
+                i = this.garage.length;
+            } else {
+                if(i == this.garage.length - 1){
+                    System.out.println("nie ma miejsca ");
+                }
+            }
+        }
+    }
     public boolean hasCar(Car newCar) {
         for (int i = 0; i < this.garage.length; i++) {
             if (this.garage[i] != null && this.garage[i].equals(newCar)) {
                 return true;
             }
         }
-
-
         return false;
     }
+
+    public Double getGarageValue(){
+        Double totalValue = 0.0;
+        for (Car car : this.garage){
+            if (car != null){
+                totalValue += car.value;
+            }
+        }
+        System.out.println("Wartosc wszystkich samochodow:");
+        return totalValue;
+    }
 }
+
 
 

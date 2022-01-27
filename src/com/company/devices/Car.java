@@ -39,8 +39,8 @@ public abstract class Car extends Device implements Saleable {
         else{
             seller.cash += price;
             buyer.cash -= price;
-            seller.car = null;
-            buyer.car = this;
+            seller.removeCar(this);
+            buyer.addCar(this);
             System.out.println("udalo sie sprzedac za" + price + "pln");
 
         }
