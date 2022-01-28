@@ -117,6 +117,9 @@ public class Main {
         System.out.println("Transakcja sprzedazy" + dacia.transactionCount());
         System.out.println("Transakcja sprzedazy" + tesla.transactionCount());
 
+        Applications facebook = new Applications("Facebook", "1.12", 50.0);
+        Applications tiktok = new Applications ("TikTok", "1.12", 10.0);
+
 
 
 
