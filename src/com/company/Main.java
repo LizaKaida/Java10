@@ -119,10 +119,24 @@ public class Main {
 
         Applications facebook = new Applications("Facebook", "1.12", 50.0);
         Applications tiktok = new Applications ("TikTok", "1.12", 10.0);
+        Applications instagram = new Applications ("instagram", "1.1", 0.0);
+        Applications twiter = new Applications ("twiter", "1.09", 200.0);
+        Applications maps = new Applications ("maps", "15.10", 0.0);
+        Applications appstore = new Applications ("appstore", "1.1", 0.0);
+        Applications discord = new Applications ("discord", "10.12", 115.0);
+        Applications telegram = new Applications ("telegram", "1.12", 10.0);
+        Applications aliexpress = new Applications ("aliexpress", "10.12", 0.0);
 
 
 
+        System.out.println("sprawdzamy ile Anan ma pieniędzy" + Anna.cash );
+        System.out.println("sprawdzamy ile Krzysztof ma pieniędzy" + Krzysztof.cash );
+        System.out.println("sprawdzamy ile Adrian ma pieniędzy" + Adrian.cash );
 
+        System.out.println("zainstalowana aplikacja" + facebook.name + iphone.appIsInstalled(facebook) );
+        System.out.println("zainstalowana aplikacja " + tiktok.name + iphone.appIsInstalled(tiktok) );
+
+        System.out.println("wartość wszystkich zainstalowanych aplikacji" + iphone.valueInstalledApps());
 
     }
 }

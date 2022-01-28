@@ -1,5 +1,6 @@
 package com.company.devices;
 
+import com.company.Applications;
 import com.company.Saleable;
 
 abstract public class Device implements Saleable {
