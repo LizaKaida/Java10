@@ -90,6 +90,14 @@ public class Main {
         apps.add("Facebook");
         iphone.installAnApp(apps);
 
+        Human Anna = new Human();
+        Human Krzysztof = new Human();
+        Human Adrian = new Human();
+
+        audi.value = 1000.0;
+        dacia.value = 300.0;
+        tesla.value = 1000.0;
+
 
 
 

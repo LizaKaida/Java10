@@ -3,7 +3,7 @@ package com.company.creatures;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
-public abstract class Human extends Animal {
+public class Human extends Animal {
     private static final int DEFAULT_GARAGE_SIZE = 10;
     public boolean getSalary;
     public boolean species;
