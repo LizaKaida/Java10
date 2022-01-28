@@ -1,5 +1,6 @@
 package com.company.creatures;
 
+import com.company.Disel;
 import com.company.Saleable;
 
 import java.util.Objects;
@@ -70,6 +71,7 @@ public abstract class Animal implements Saleable,Feedable {
             System.out.println("Za duzo spacerowalem");
         }
     }
+
 }
 
 

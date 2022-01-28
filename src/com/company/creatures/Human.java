@@ -10,11 +10,11 @@ public class Human extends Animal {
     public Human human;
     public Phone mobile;
    public Car[] garage;
+    public double salary;
     String Human_Species = "homo sapiens";
 
     public String firstName;
     String lastName;
-    private Double salary;
     public Double cash;
     Animal pet;
 

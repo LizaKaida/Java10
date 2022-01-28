@@ -98,7 +98,24 @@ public class Main {
         dacia.value = 300.0;
         tesla.value = 1000.0;
 
+        Anna.salary = 10000.0;
+        Krzysztof.salary = 20000.0;
+        Adrian.salary = 5000.0;
 
+        Anna.addCar(audi);
+        audi.carOwners();
+        Krzysztof.addCar(tesla);
+        tesla.carOwners();
+        Adrian.addCar(dacia);
+        dacia.carOwners();
+
+        System.out.println("Byli wlasciciele" + audi.checkOwners());
+        System.out.println("Byli wlasciciele" + dacia.checkOwners());
+        System.out.println("Byli wlasciciele" + tesla.checkOwners());
+
+        System.out.println("Transakcja sprzedazy" + audi.transactionCount());
+        System.out.println("Transakcja sprzedazy" + dacia.transactionCount());
+        System.out.println("Transakcja sprzedazy" + tesla.transactionCount());
 
 
 
