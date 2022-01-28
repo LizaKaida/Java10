@@ -6,6 +6,9 @@ import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -80,6 +83,12 @@ public class Main {
         Disel audi = new Disel ("Audi", "sport", 2010, "red");
         LPG dacia = new LPG ("dacia", "duster", 2010, "black");
         Electric tesla = new Electric( "tesla", "m10", 2019, "white");
+
+        List<String> apps = new ArrayList<>();
+        apps.add("TikTok");
+        apps.add("Instagram");
+        apps.add("Facebook");
+        iphone.installAnApp(apps);
 
 
 
